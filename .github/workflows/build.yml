@@ -1,4 +1,4 @@
-name: Build image
+name: Build
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
       - master
     paths:
       - Dockerfile
-      - rootfs/
+      - rootfs/*
       - .github/workflows/build.yml
 
 jobs:
