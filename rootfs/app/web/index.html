@@ -2,13 +2,219 @@
 
 <head>
     <meta charset="utf-8">
-    <title>微信代理</title>
+    <title>企业微信API代理</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #07C160;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+        h3 {
+            margin-top: 15px;
+            color: #444;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .note {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-left: 4px solid #07C160;
+            margin: 20px 0;
+        }
+        .api-section {
+            margin-bottom: 20px;
+        }
+        .api-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>微信代理搭建成功！</h1>
+    <div class="container">
+        <h1>企业微信API代理服务</h1>
+        
+        <div class="note">
+            <p>代理服务已成功启动！您现在可以通过此服务访问企业微信API。</p>
+        </div>
+        
+        <h2>支持的API路径</h2>
+        <p>本代理服务支持所有企业微信API，主要包括以下分类：</p>
 
+        <div class="api-section">
+            <h3>通用路径</h3>
+            <ul>
+                <li><strong>所有API：</strong> /cgi-bin/</li>
+            </ul>
+        </div>
 
+        <div class="api-section">
+            <h3>身份验证</h3>
+            <ul>
+                <li>/cgi-bin/gettoken</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h3>成员管理</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/cgi-bin/user/list</li>
+                    <li>/cgi-bin/user/get</li>
+                    <li>/cgi-bin/user/create</li>
+                    <li>/cgi-bin/user/update</li>
+                    <li>/cgi-bin/user/delete</li>
+                    <li>/cgi-bin/user/batchdelete</li>
+                    <li>/cgi-bin/user/simplelist</li>
+                    <li>/cgi-bin/user/convert_to_openid</li>
+                    <li>/cgi-bin/user/convert_to_userid</li>
+                    <li>/cgi-bin/user/authsucc</li>
+                    <li>/cgi-bin/user/getuserinfo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>部门管理</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/cgi-bin/department/list</li>
+                    <li>/cgi-bin/department/get</li>
+                    <li>/cgi-bin/department/create</li>
+                    <li>/cgi-bin/department/update</li>
+                    <li>/cgi-bin/department/delete</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>标签管理</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/cgi-bin/tag/list</li>
+                    <li>/cgi-bin/tag/create</li>
+                    <li>/cgi-bin/tag/update</li>
+                    <li>/cgi-bin/tag/delete</li>
+                    <li>/cgi-bin/tag/get</li>
+                    <li>/cgi-bin/tag/addtagusers</li>
+                    <li>/cgi-bin/tag/deltagusers</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>消息推送</h3>
+            <ul>
+                <li>/cgi-bin/message/send</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h3>菜单管理</h3>
+            <ul>
+                <li>/cgi-bin/menu/create</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h3>素材管理</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/cgi-bin/media/upload</li>
+                    <li>/cgi-bin/media/get</li>
+                    <li>/cgi-bin/media/uploadimg</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>应用管理</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/cgi-bin/agent/list</li>
+                    <li>/cgi-bin/agent/get</li>
+                    <li>/cgi-bin/agent/set</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>外部联系人</h3>
+            <ul>
+                <li>/cgi-bin/externalcontact/</li>
+                <li>/cgi-bin/externalcontact/get_follow_user_list</li>
+                <li>/cgi-bin/externalcontact/add_contact_way</li>
+                <li>/cgi-bin/externalcontact/get_contact_way</li>
+                <li>/cgi-bin/externalcontact/update_contact_way</li>
+                <li>/cgi-bin/externalcontact/del_contact_way</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h3>通讯录管理</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/cgi-bin/batch/invite</li>
+                    <li>/cgi-bin/batch/syncuser</li>
+                    <li>/cgi-bin/batch/replaceuser</li>
+                    <li>/cgi-bin/batch/replaceparty</li>
+                    <li>/cgi-bin/batch/getresult</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>会话内容存档</h3>
+            <ul>
+                <li>/cgi-bin/msgaudit/</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h3>企业支付</h3>
+            <div class="api-list">
+                <ul>
+                    <li>/mmpaymkttransfers/</li>
+                    <li>/cgi-bin/mch/</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>群机器人</h3>
+            <ul>
+                <li>/cgi-bin/webhook/send</li>
+            </ul>
+        </div>
+        
+        <h2>使用方法</h2>
+        <p>将您应用中的企业微信API请求地址从 <code>https://qyapi.weixin.qq.com</code> 修改为当前代理服务器地址即可。</p>
+        
+        <div class="note">
+            <p>注意：本代理仅转发请求，不存储任何数据。请确保您的应用正确处理API的鉴权和安全。</p>
+        </div>
+    </div>
 </body>
 
 </html>
