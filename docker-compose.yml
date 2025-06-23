@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  wechatapi:
+    container_name: wechatapi
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: 'v6ole/wechatapi:latest'
+    ports:
+      - '8080:80'
+    volumes:
+      - ./rootfs/etc/nginx/http.d:/etc/nginx/http.d
+      - ./rootfs/app/web:/app/web
+    environment:
+      - TZ=Asia/Shanghai 
